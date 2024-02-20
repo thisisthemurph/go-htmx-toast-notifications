@@ -1,0 +1,115 @@
+body {
+    font-family: monospace;
+    font-size: 1.4rem;
+}
+
+body main {
+    margin: 0 1rem;
+}
+
+p {
+    line-height: 1.8rem;
+}
+
+/* Style the form container */
+form {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Style form labels */
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+/* Style input fields */
+input[type="text"],
+input[type="email"] {
+    width: 100%;
+    font-size: 1.4rem;
+    font-family: monospace;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+}
+
+/* Style the submit button */
+button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff; /* Blue color */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+/* Hover effect for the submit button */
+button[type="submit"]:hover {
+    background-color: #0056b3; /* Darker blue color */
+}
+
+.section {
+    margin-bottom: 2rem;
+}
+
+/** Toast **/
+
+#toast-container {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+#toast-container .toast {
+    width: 100%;
+    text-align: left;
+    font-size: 1.2rem;
+    font-family: monospace;
+    padding: 1rem;
+    border: solid 0 black;
+    border-left-width: 4px;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+#toast-container .toast.toast-success {
+    background: rgb(240 253 244);
+    color: rgb(22 101 52);
+    border-color: rgb(22 101 52);
+}
+#toast-container .toast.toast-warning {
+    background: rgb(254 249 195);
+    color: #92400e;
+    border-color: #92400e;
+}
+
+#toast-container .toast.toast-danger {
+    background: #fecaca;
+    color: #991b1b;
+    border-color: #991b1b;
+}
+
+.success {
+    padding: 20px;
+    background: rgb(147 197 253);
+    color: #0051ff; /* Blue color */
+    border: solid 2px #007bff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Home Page</title>
+    <link rel="stylesheet" href="app.css">
+    <script src="https://unpkg.com/htmx.org@1.9.10" integrity="sha384-D1Kt99CQMDuVetoL1lrYwg5t+9QdHe7NLX/SoJYkXDFfX37iInKRy5xLSi8nO7UC" crossorigin="anonymous"></script>
+    <script src="toast.js" defer></script>
+</head>
+<body>
+    <main>
+        <section class="section">
+            <h1>Subscribe to me!</h1>
+            <p>Welcome to the amazing newsletter! Subscribe to learn things.</p>
+            <p>Ensure your email address is correct and don't bother subscribing if your name is Tom!</p>
+        </section>
+
+        <form hx-post="/newsletter" hx-swap="outerHTML">
+            <div>
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" placeholder="What should we call you?">
+            </div>
+            <div>
+                <label for="email">Email</label>
+                <input type="text" id="email" name="email" placeholder="Enter your email address">
+            </div>
+            <button type="submit">Subscribe</button>
+        </form>
+    </main>
+    <section id="toast-container"></section>
+</body>
+</html>
